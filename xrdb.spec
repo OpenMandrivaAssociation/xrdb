@@ -1,5 +1,5 @@
 Name: xrdb
-Version: 1.0.7
+Version: 1.0.8
 Release: %mkrel 1
 Summary: X server resource database utility
 Group: Development/X11
@@ -21,8 +21,7 @@ any or all screens, or everything combined.
 %setup -q -n %{name}-%{version}
 
 %build
-%configure2_5x	--x-includes=%{_includedir}\
-		--x-libraries=%{_libdir}
+%configure2_5x
 
 %make
 
