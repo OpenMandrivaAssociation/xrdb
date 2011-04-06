@@ -1,5 +1,5 @@
 Name: xrdb
-Version: 1.0.8
+Version: 1.0.9
 Release: %mkrel 1
 Summary: X server resource database utility
 Group: Development/X11
@@ -10,7 +10,7 @@ BuildRoot: %{_tmppath}/%{name}-root
 BuildRequires: libx11-devel >= 1.0.0
 BuildRequires: libxmu-devel >= 1.0.0
 BuildRequires: x11-util-macros >= 1.0.1
-Requires: gcc-cpp
+Requires: mcpp
 
 %description
 Xrdb is used to get or set the contents of the RESOURCE_MANAGER property on the
@@ -21,7 +21,7 @@ any or all screens, or everything combined.
 %setup -q -n %{name}-%{version}
 
 %build
-%configure2_5x
+%configure2_5x --with-cpp=%{_bindir}/mcpp
 
 %make
 
