@@ -3,9 +3,8 @@ Version: 1.0.9
 Release: %mkrel 2
 Summary: X server resource database utility
 Group: Development/X11
-Source: http://xorg.freedesktop.org/releases/individual/app/%{name}-%{version}.tar.bz2
+Source0: http://xorg.freedesktop.org/releases/individual/app/%{name}-%{version}.tar.bz2
 License: MIT
-BuildRoot: %{_tmppath}/%{name}-root
 
 BuildRequires: libx11-devel >= 1.0.0
 BuildRequires: libxmu-devel >= 1.0.0
@@ -21,19 +20,15 @@ any or all screens, or everything combined.
 %setup -q -n %{name}-%{version}
 
 %build
+autoreconf -fi
 %configure2_5x --with-cpp=%{_bindir}/mcpp
 
 %make
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
-%clean
-rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root)
 %{_bindir}/xrdb
 %{_mandir}/man1/xrdb.*
 
