@@ -1,5 +1,5 @@
 Name: xrdb
-Version: 1.2.0
+Version: 1.2.1
 Release: 1
 Summary: X server resource database utility
 Group: Development/X11
