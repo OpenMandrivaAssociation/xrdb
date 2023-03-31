@@ -1,6 +1,6 @@
 Name: xrdb
 Version: 1.2.1
-Release: 1
+Release: 2
 Summary: X server resource database utility
 Group: Development/X11
 Source0: http://xorg.freedesktop.org/releases/individual/app/%{name}-%{version}.tar.bz2
